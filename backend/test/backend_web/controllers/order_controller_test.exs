@@ -5,7 +5,7 @@ defmodule BackendWeb.OrderControllerTest do
 
   setup %{conn: conn} do
     user = user_fixture(%{user_id: "user-order-test-#{Enum.random(1..1000)}", balance: 600})
-    products = [product_fixture(%{price: 300}), product_fixture(%{price: 300})]
+    products = [product_fixture(%{price: 100}), product_fixture(%{price: 100})]
     products_ids = Enum.map(products, fn p -> p.id end)
 
     {:ok,
