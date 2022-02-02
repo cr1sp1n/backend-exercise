@@ -30,7 +30,6 @@ defmodule Backend.OrderService do
   defp update_balance(_repo, %{retrieve_user: user, create_order: {order, _}}) do
     new_balance = user.balance - order.total
     Users.update_user(user, %{balance: new_balance})
-    IO.inspect(new_balance)
     {:ok, new_balance}
   end
 end
